@@ -733,11 +733,6 @@ depd@^1.0.0, depd@^1.1.0, depd@~1.1.2:
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
 
-depd@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/depd/-/depd-2.0.0.tgz#b696163cc757560d09cf22cc8fad1571b79e76df"
-  integrity sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==
-
 destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
@@ -1795,24 +1790,6 @@ loopback-datasource-juggler@^3.0.0, loopback-datasource-juggler@^3.28.0:
     bluebird "^3.1.1"
     debug "^3.1.0"
     depd "^1.0.0"
-    inflection "^1.6.0"
-    lodash "^4.17.4"
-    loopback-connector "^4.4.0"
-    minimatch "^3.0.3"
-    qs "^6.5.0"
-    shortid "^2.2.6"
-    strong-globalize "^4.1.1"
-    traverse "^0.6.6"
-    uuid "^3.0.1"
-
-loopback-datasource-juggler@^4.5.3:
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/loopback-datasource-juggler/-/loopback-datasource-juggler-4.5.3.tgz#6893b312d56efd1ff154d5e17805015fcea6d8de"
-  integrity sha512-pxK/dyqS3bQUqBoypU+u9QjP2/76GuV8k/2ftDEeo/pEmS2ttofWip4xG7SssSvAeZoVA5nT7h5cOX0F/gGPWA==
-  dependencies:
-    async "^2.6.0"
-    debug "^4.1.0"
-    depd "^2.0.0"
     inflection "^1.6.0"
     lodash "^4.17.4"
     loopback-connector "^4.4.0"
