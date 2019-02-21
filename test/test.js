@@ -13,18 +13,19 @@ describe('Aggregate features', function () {
   let City, Company, Person, assert, context;
 
   before((done) => {
-    require('./fixtures/get-app')('simple-app')((app) => {
+    require('./fixtures/get-app')('simple-app')(async (app) => {
       require('../')(app);
       City = app.models.City;
       Company = app.models.Company;
       Person = app.models.Person;
       assert = require('./helpers/asserts')(app);
       const seeder = new Seeder(app);
-      seeder.seed(app, (err) => {
-        if (err) return done(err);
-        context = seeder.context;
+      try {
+        context = await seeder.seed();
         done();
-      });
+      } catch (err) {
+        done(err);
+      }
     });
   });
 
