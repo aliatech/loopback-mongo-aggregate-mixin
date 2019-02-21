@@ -1,0 +1,50 @@
+{
+  "name": "@aliatech/loopback-mongo-aggregate-mixin",
+  "version": "1.0.0",
+  "description": "Loopback mixin to query MongoDB aggregation pipeline and build the instances from results",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Juan Costa (ALIA Technologies)",
+    "email": "juancosta@alialabs.com",
+    "social": "Akeri",
+    "url": "http://alialabs.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliatech/loopback-mongo-aggregate-mixin.git"
+  },
+  "scripts": {
+    "lint": "eslint index.js",
+    "test": "mocha",
+    "test-with-coverage": "nyc --reporter=text --reporter=text-summary --reporter=html mocha",
+    "publish-coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "main": "index.js",
+  "keywords": [
+    "node",
+    "loopback",
+    "mixin",
+    "orm",
+    "mongodb",
+    "aggregate",
+    "aggregation",
+    "pipeline"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "eslint": "^5.13.0",
+    "eslint-config-google": "^0.12.0",
+    "loopback": "^3.25.0",
+    "loopback-boot": "^2.27.1",
+    "loopback-connector-mongodb": "^3.9.2",
+    "mocha": "^5.2.0",
+    "nyc": "^13.2.0",
+    "should": "^13.2.3"
+  }
+}

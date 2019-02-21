@@ -1,0 +1,25 @@
+{
+  "name": "City",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Aggregate": true
+  },
+  "properties": {
+    "ref": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "population": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "methods": {}
+}

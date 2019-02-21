@@ -1,0 +1,38 @@
+{
+  "name": "Person",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Aggregate": {
+      "mongodbArgs": {
+        "allowDiskUse": true
+      }
+    }
+  },
+  "properties": {
+    "ref": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "birthDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company"
+    },
+    "city": {
+      "type": "belongsTo",
+      "model": "City"
+    }
+  },
+  "methods": {}
+}

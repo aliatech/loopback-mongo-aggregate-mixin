@@ -1,0 +1,52 @@
+[
+  {
+    "ref": "company1",
+    "name": "Koepp, Halvorson and Shields",
+    "sector": "Software",
+    "cityId": "city1.id",
+    "location": {
+      "type": "Point",
+      "coordinates": [-0.076132, 51.508530]
+    }
+  },
+  {
+    "ref": "company2",
+    "name": "Veum Group",
+    "sector": "Software",
+    "cityId": "city2.id",
+    "location": {
+      "type": "Point",
+      "coordinates": [-3.707398, 40.415363]
+    }
+  },
+  {
+    "ref": "company3",
+    "name": "Hayes Group",
+    "sector": "Software",
+    "cityId": "city3.id",
+    "location": {
+      "type": "Point",
+      "coordinates": [2.349014, 48.864716]
+    }
+  },
+  {
+    "ref": "company4",
+    "name": "Kovacek, Miller and Abbott",
+    "sector": "Motors",
+    "cityId": "city4.id",
+    "location": {
+      "type": "Point",
+      "coordinates": [-58.381592, -34.603722]
+    }
+  },
+  {
+    "ref": "company5",
+    "name": "Deckow and Sons",
+    "sector": "Advocacy",
+    "cityId": "city5.id",
+    "location": {
+      "type": "Point",
+      "coordinates": [16.363449, 48.210033]
+    }
+  }
+]
