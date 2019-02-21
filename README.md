@@ -1,10 +1,8 @@
-<!--
-[![Build Status](https://travis-ci.org/aliatech/loopback-mongo-distinct-mixin.svg?branch=master)](https://travis-ci.org/aliatech/loopback-mongo-distinct-mixin)
-[![Coverage Status](https://coveralls.io/repos/github/aliatech/loopback-mongo-distinct-mixin/badge.svg?branch=master)](https://coveralls.io/github/aliatech/loopback-mongo-distinct-mixin?branch=master)
-[![npm version](https://badge.fury.io/js/%40aliatech%2Floopback-mongo-distinct-mixin.svg)](https://badge.fury.io/js/%40aliatech%2Floopback-mongo-distinct-mixin)
--->
-
 # Loopback Aggregate mixin for MongoDB
+
+[![Build Status](https://travis-ci.org/aliatech/loopback-mongo-aggregate-mixin.svg?branch=master)](https://travis-ci.org/aliatech/loopback-mongo-aggregate-mixin)
+[![Coverage Status](https://coveralls.io/repos/github/aliatech/loopback-mongo-aggregate-mixin/badge.svg?branch=master)](https://coveralls.io/github/aliatech/loopback-mongo-aggregate-mixin?branch=master)
+[![npm version](https://badge.fury.io/js/%40aliatech%2Floopback-mongo-aggregate-mixin.svg)](https://badge.fury.io/js/%40aliatech%2Floopback-mongo-aggregate-mixin)
 
 Give models the ability to query native **MongoDB aggregates** and **build instances** from results.
 
