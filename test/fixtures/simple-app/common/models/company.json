@@ -1,0 +1,43 @@
+{
+  "name": "Company",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "Aggregate": true
+  },
+  "properties": {
+    "ref": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "sector": {
+      "type": "string"
+    },
+    "location": {
+      "description": "MongoDB Point Geometry",
+      "type": "object"
+    }
+  },
+  "indexes": {
+    "locationIndex": {
+      "location": "2dsphere"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "city": {
+      "type": "belongsTo",
+      "model": "City"
+    },
+    "employees": {
+      "type": "hasMany",
+      "model": "Person"
+    }
+  },
+  "methods": {}
+}
