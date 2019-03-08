@@ -1,54 +1,5 @@
 {
-  "parserOptions": {
-    "ecmaVersion": 2017
-  },
-  "env": {
-    "amd": true,
-    "es6": true,
-    "node": true,
-    "mocha": true
-  },
   "extends": [
-    "eslint:recommended",
-    "google"
-  ],
-  "rules": {
-    "max-len": [
-      "error",
-      100,
-      2,
-      {
-        "ignoreComments": true,
-        "ignoreUrls": true,
-        "ignorePattern": "^\\s*var\\s.+=\\s*(require\\s*\\()|(/)"
-      }
-    ],
-    "indent": [
-      "error",
-      2
-    ],
-    "space-before-function-paren": [
-      "error",
-      "always"
-    ],
-    "one-var": [
-      "error",
-      {
-        "initialized": "never",
-        "uninitialized": "always"
-      }
-    ],
-    "valid-jsdoc": [
-      "error",
-      {
-        "requireReturnDescription": false,
-        "prefer": {
-          "returns": "returns"
-        }
-      }
-    ],
-    "capitalized-comments": "error",
-    "padded-blocks": "off",
-    "new-cap": "off"
-  }
+    "@aliatech/aliatech/env-node"
+  ]
 }

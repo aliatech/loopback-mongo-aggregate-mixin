@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@aliatech/aliatech/env-mocha"
+  ]
+}

@@ -2,7 +2,8 @@
 
 [![Build Status](https://travis-ci.org/aliatech/loopback-mongo-aggregate-mixin.svg?branch=master)](https://travis-ci.org/aliatech/loopback-mongo-aggregate-mixin)
 [![Coverage Status](https://coveralls.io/repos/github/aliatech/loopback-mongo-aggregate-mixin/badge.svg?branch=master)](https://coveralls.io/github/aliatech/loopback-mongo-aggregate-mixin?branch=master)
-[![npm version](https://badge.fury.io/js/%40aliatech%2Floopback-mongo-aggregate-mixin.svg)](https://badge.fury.io/js/%40aliatech%2Floopback-mongo-aggregate-mixin)
+[![npm version](https://img.shields.io/npm/v/@aliatech/loopback-mongo-aggregate-mixin.svg?color=blue)](https://www.npmjs.com/package/@aliatech/loopback-mongo-aggregate-mixin)
+<!--![npm total downloads](https://img.shields.io/npm/dt/@aliatech/loopback-mongo-aggregate-mixin.svg?color=9cf)-->
 
 Give models the ability to query native **MongoDB aggregates** and **build instances** from results.
 
@@ -247,4 +248,4 @@ Developed by
 for
 [ALIA Technologies](https://github.com/aliatech "Github's profile")
 
-<img src="http://alialabs.com/images/logos/logo-full-big.png" title="ALIA Technologies" alt="ALIA Technologies" height=100/>
+[<img src="http://alialabs.com/images/logos/logo-full-big.png" alt="ALIA Technologies" height=100/>](http://alialabs.com "Go to ALIA Technologies' website")

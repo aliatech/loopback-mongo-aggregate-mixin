@@ -1,5 +1,3 @@
-/* eslint-disable require-jsdoc */
-
 'use strict';
 
 const _ = require('lodash');
@@ -7,9 +5,7 @@ const should = require('should');
 const Seeder = require('./fixtures/simple-app/seeder');
 const rewriteId = require('../lib/rewrite-id');
 
-
-describe('Aggregate features', function () {
-
+describe('Aggregate features', () => {
   let City, Company, Person, assert, context;
 
   before((done) => {
@@ -450,5 +446,4 @@ describe('Aggregate features', function () {
       done();
     });
   });
-
 });
