@@ -1,6 +1,6 @@
 {
   "name": "@aliatech/loopback-mongo-aggregate-mixin",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Loopback mixin to query MongoDB aggregation pipeline and build the instances from results",
   "publishConfig": {
     "access": "public"
@@ -35,12 +35,13 @@
     "pipeline"
   ],
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "polygoat": "^1.1.4"
   },
   "devDependencies": {
-    "@aliatech/eslint-config-aliatech": "^0.1.0",
+    "@aliatech/eslint-config-aliatech": "^0.1.2",
     "coveralls": "^3.0.2",
-    "eslint": "^5.13.0",
+    "eslint": "^5.15.1",
     "loopback": "^3.25.0",
     "loopback-boot": "^2.27.1",
     "loopback-connector-mongodb": "^3.9.2",
