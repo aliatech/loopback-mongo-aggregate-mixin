@@ -1,6 +1,6 @@
 {
   "name": "@aliatech/loopback-mongo-aggregate-mixin",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Loopback mixin to query MongoDB aggregation pipeline and build the instances from results",
   "publishConfig": {
     "access": "public"
