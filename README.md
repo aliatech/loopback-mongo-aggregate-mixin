@@ -46,7 +46,7 @@ Include the mixin in `server/model-config.json`. Example for Loopback 3:
     ],
     "mixins": [
       "loopback/common/mixins",
-      "../node_modules/loopback-mongo-aggregate-mixin/lib",
+      "../node_modules/@aliatech/loopback-mongo-aggregate-mixin/lib",
       "../common/mixins"
     ]
   }
@@ -208,6 +208,19 @@ app.models.Person.aggregate({
 }).catch((err) => {
   // handle an error
 });
+```
+
+> Same example using await
+
+```js
+try{
+  const persons = await app.models.Person.aggregate({
+    where: {birthDate: {gt: new Date('1980')}},
+    aggregate: [{$sample: {size: 3}}],
+  });
+} catch(err) {
+  // handle an error
+}
 ```
 
 
