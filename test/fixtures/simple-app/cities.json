@@ -12,16 +12,19 @@
   {
     "ref": "city3",
     "name": "Paris",
-    "population": 2200
+    "population": 2200,
+    "isCoastal": false
   },
   {
     "ref": "city4",
     "name": "Buenos Aires",
-    "population": 2890
+    "population": 2890,
+    "isCoastal": true
   },
   {
     "ref": "city5",
     "name": "Vienna",
-    "population": 1868
+    "population": 1868,
+    "isCoastal": false
   }
 ]

@@ -548,6 +548,52 @@ describe('Aggregate features', () => {
       });
     });
 
+    it('Should not match nulls when comparing a relation property to false', (done) => {
+      Company.aggregate({
+        include: ['city'],
+        where: {
+          'city.isCoastal': false,
+        },
+      }, {nullReplacement: true})
+        .then((companies) => {
+          companies.forEach((company) => {
+            const city = company.city();
+            should.exist(city);
+            city.should.have.property('isCoastal').which.eql(false);
+          });
+          done();
+        })
+        .catch((err) => done(err));
+    });
+
+    it('If a relation field is null it should be replaced with nullReplacement option ', (done) => {
+      const nullReplacement = 'wasNotSpecified';
+      Company.aggregate(
+        {
+          include: ['city'],
+          where: {
+            'city.isCoastal': nullReplacement,
+          },
+        },
+        {
+          nullReplacement,
+          buildLater: true,
+        }
+      )
+        .then((data) => {
+          const companies = data[0];
+          should.exist(companies);
+          companies.should.be.Array();
+          should.ok(companies.length > 0);
+          companies.forEach((company) => {
+            const city = company.city;
+            should.exist(city);
+            city.should.have.property('isCoastal').which.eql(nullReplacement);
+          });
+          done();
+        })
+        .catch((err) => done(err));
+    });
   });
 
 });
