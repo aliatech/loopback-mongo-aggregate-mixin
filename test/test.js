@@ -548,6 +548,23 @@ describe('Aggregate features', () => {
       });
     });
 
+    it('Should not match nulls when comparing a relation property to false', (done) => {
+      Company.aggregate({
+        include: ['city'],
+        where: {
+          'city.isCoastal': false,
+        },
+      })
+        .then((companies) => {
+          companies.forEach((company) => {
+            const city = company.city();
+            should.exist(city);
+            city.should.have.property('isCoastal').which.eql(false);
+          });
+          done();
+        })
+        .catch((err) => done(err));
+    });
   });
 
 });
