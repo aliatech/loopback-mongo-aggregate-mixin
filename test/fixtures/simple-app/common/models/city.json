@@ -17,6 +17,9 @@
     },
     "population": {
       "type": "number"
+    },
+    "isCoastal": {
+      "type": "boolean"
     }
   },
   "validations": [],
