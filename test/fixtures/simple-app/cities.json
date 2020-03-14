@@ -2,29 +2,34 @@
   {
     "ref": "city1",
     "name": "London",
-    "population": 8136
+    "population": 8136,
+    "countryId": "GB"
   },
   {
     "ref": "city2",
     "name": "Madrid",
-    "population": 3166
+    "population": 3166,
+    "countryId": "SP"
   },
   {
     "ref": "city3",
     "name": "Paris",
     "population": 2200,
-    "isCoastal": false
+    "isCoastal": false,
+    "countryId": "FR"
   },
   {
     "ref": "city4",
     "name": "Buenos Aires",
     "population": 2890,
-    "isCoastal": true
+    "isCoastal": true,
+    "countryId": "AR"
   },
   {
     "ref": "city5",
     "name": "Vienna",
     "population": 1868,
-    "isCoastal": false
+    "isCoastal": false,
+    "countryId": "AU"
   }
 ]
