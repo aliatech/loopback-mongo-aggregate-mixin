@@ -1,7 +1,7 @@
 {
-  "name": "City",
+  "name": "Country",
   "base": "PersistedModel",
-  "idInjection": true,
+  "idInjection": false,
   "options": {
     "validateUpsert": true
   },
@@ -9,7 +9,8 @@
     "Aggregate": true
   },
   "properties": {
-    "ref": {
+    "id": {
+      "id": true,
       "type": "string"
     },
     "name": {
@@ -17,18 +18,9 @@
     },
     "population": {
       "type": "number"
-    },
-    "isCoastal": {
-      "type": "boolean"
     }
   },
   "validations": [],
-  "relations": {
-    "country": {
-      "type": "belongsTo",
-      "model": "Country",
-      "foreignKey": "countryId"
-    }
-  },
+  "relations": {},
   "methods": {}
 }

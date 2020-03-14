@@ -1,0 +1,27 @@
+[
+  {
+    "id": "GB",
+    "name": "Great Britain",
+    "population": 66000000
+  },
+  {
+    "id": "SP",
+    "name": "Madrid",
+    "population": 46000000
+  },
+  {
+    "id": "FR",
+    "name": "France",
+    "population": 67000000
+  },
+  {
+    "id": "AR",
+    "name": "Argentina",
+    "population": 44000000
+  },
+  {
+    "id": "AU",
+    "name": "Austria",
+    "population": 9000000
+  }
+]

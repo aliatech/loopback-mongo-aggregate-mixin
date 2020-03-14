@@ -16,6 +16,7 @@ module.exports = class Seeder {
     const City = this.app.models.City;
     const Company = this.app.models.Company;
     const Person = this.app.models.Person;
+    const Country = this.app.models.Country;
     // Seed cities
     async.mapSeries(require('./cities.json'), (cityData, nextItem) => {
       City.create(cityData, nextItem);
@@ -40,7 +41,13 @@ module.exports = class Seeder {
           if (err) return next(err);
           context.persons = persons;
           context.persons.forEach((person) => context[person.ref] = person);
-          next(null, context);
+          // Seed countries
+          async.mapSeries(require('./countries.json'), (countryData, nextItem) => {
+            Country.create(countryData, nextItem);
+          }, (err) => {
+            if (err) return next(err);
+            next(null, context);
+          });
         });
       });
     });
