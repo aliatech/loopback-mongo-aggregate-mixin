@@ -591,7 +591,90 @@ describe('Aggregate features', () => {
             city.should.have.property('isCoastal').which.eql(nullReplacement);
           });
           done();
-        })
+        });
+    });
+
+    it('Should aggregate with a 3 level deep relation', (done) => {
+      const countryName = 'Great Britain';
+      Person.aggregate({
+        include: [{
+          relation: 'company',
+          scope: {
+            include: [
+              {
+                relation: 'city',
+                scope: {
+                  include: ['country'],
+                },
+              },
+            ],
+          },
+        }],
+        where: {
+          'company.city.country.name': countryName,
+        },
+      }).then((people) => {
+        should.exist(people);
+        people.should.be.Array();
+        should.ok(people.length > 0, 'people array shoudn\'t be empty');
+        people.forEach((person) => {
+          const company = person.company();
+          company.should.be.Object();
+          company.should.have.property('city');
+  
+          const city = company.city();
+          city.should.be.Object();
+          city.should.have.property('country');
+  
+          const country = city.country();
+          country.should.be.Object();
+          country.should.have.property('name').which.is.eql(countryName);
+        });
+        done();
+      })
+        .catch((err) => done(err));
+    });
+
+    it('Two nested relations with overlapping paths shouldn\'t overwrite each other', (done) => {
+      const countryName = 'Great Britain';
+      const cityName = 'London';
+      Person.aggregate({
+        include: [{
+          relation: 'company',
+          scope: {
+            include: [
+              {
+                relation: 'city',
+                scope: {
+                  include: ['country'],
+                },
+              },
+            ],
+          },
+        }],
+        where: {
+          'company.city.country.name': countryName,
+          'company.city.name': cityName,
+        },
+        limit: 1,
+      }).then((people) => {
+        should.exist(people);
+        people.should.be.Array().and.length(1);
+        const person = people[0];
+        const company = person.company();
+        company.should.be.Object();
+        company.should.have.property('city');
+
+        const city = company.city();
+        city.should.be.Object();
+        city.should.have.property('name').which.is.eql(cityName);
+        city.should.have.property('country');
+
+        const country = city.country();
+        country.should.be.Object();
+        country.should.have.property('name').which.is.eql(countryName);
+        done();
+      })
         .catch((err) => done(err));
     });
   });
